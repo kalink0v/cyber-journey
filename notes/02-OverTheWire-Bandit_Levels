@@ -1,0 +1,33 @@
+Level 0 passed by simply connecting using SSH and by using "cat readme" to see readme for the password.
+bandit1 pass:6y2kwnwK6grgvwvpvLaa2T1cpFEKOhNR
+
+Level 1 passed by using "cat ./-" since the file with the password was "-" and is interpreted as command-line options. 
+"cat < -" also works.
+bandit2 pass:PK8fYLZg2hnHSz83plBL1iEPKdD3QToB
+
+Level 2 passed by using "cat ./"--spaces in this filename--" using quotes and ./
+bandit3 pass:7ZZ2LFrykP2zEyvBl4m3clcL7tGYJPME
+
+Level 3 passed by using 
+"cd inhere"
+"ls -a"
+"cat ...Hiding-From-You"
+bandit4 pass:xzTXq1rDJQVVAzdv5cHq1TQytTWufAMq
+
+Level 4 passed by bruteforcing cat in each file.
+"bandit4@bandit:~/inhere$ cat ./-file01
+���f�Gy���}��nS��2����[abandit4@bandit:~/inhere$ cat ./-file02
+����f   kK����Vʁ�3)��h�,����c��bandit4@bandit:~/inhere$ cat ./-file03
+��;�
+�J�ç�����␦t1ht��bandit4@bandit:~/inhere$ cat ./-file04
+��@���9
+       f�;��t��X�
+                 V~�    �а+ݙ,bandit4@bandit:~/inhere$ cat ./-file05
+��2>7�k�?g*�g�H|�7�#n�4�`�,��bandit4@bandit:~/inhere$ cat ./-file06
+p���i~���C��Eh�3�bandit4@bandit:~/inhere$ cat ./-file07
+6C7h9GD8M6ai5nr7wo1RonrzFjj9yIrG
+bandit4@bandit:~/inhere$ cat ./-file08"
+bandit5 pass:6C7h9GD8M6ai5nr7wo1RonrzFjj9yIrG
+
+"find -size 1033c"
+bandit6 pass:
